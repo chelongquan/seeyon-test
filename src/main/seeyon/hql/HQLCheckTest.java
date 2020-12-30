@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 public class HQLCheckTest {
 	public static void main(String[] args) {
-		String sql="select count(*) from com.seeyon.ctp.common.po.affair.CtpAffair as ctpa where 1 = 1 and ctpa.app in (1,4,19,20,21,22,23,24) and ctpa.subApp != 4 and ctpa.orgAccountId in(:accountId) and ( ( ctpa.templeteId = :templeteId0 and (ctpa.activityId in (15934988126738) )) ) and ( ctpa.completeTime between :startTime and :endTime ) and ctpa.state = :ctpastate";
+		String sql=" select count(*)  as count  from (  \tselect  a.TEMPLATE_ID \tfrom  \t\tRPT_WF_ANALYSIS a  \twhere  \t\t1=1  and a.RPT_YEAR = :rptYear_1 and a.RPT_MONTH = :rptMonth_1 and a.TEMP_OWNER_ACCOUNT_ID = :ownerAccountId_1 and ( a.TEMPLATE_ID in (:templateIds_1asdfghj1)  )  GROUP BY a.TEMPLATE_ID  ) c  ";
 		if(isOK(sql)) {
 			System.out.println("正常！");
 		}else {
