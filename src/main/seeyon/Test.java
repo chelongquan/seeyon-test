@@ -53,7 +53,17 @@ public class Test {
 		u7o.ifPresent(user->{
 			System.out.println(user);
 		});;
-		
+		//-------------------------------
+//		List<Map<String,Object>> ownerList = ls.stream().map(signet -> {
+//			String markName = signet.getMarkName();
+//			if(!user.getLoginAccount().equals(signet.getOrgAccountId())){
+//				markName =  markName + "("+ Functions.getAccountShortName(signet.getOrgAccountId())+")";
+//			}
+//			Map<String,Object> signetObj = new HashMap<>();
+//			signetObj.put("name", markName);
+//			signetObj.put("id", signet.getId());
+//			return signetObj;
+//		}).collect(Collectors.toList());
 	}
 
 }

@@ -4,6 +4,7 @@ public class User {
 
 	private Long id;
 	private String name;
+	private int age;
 
 	public User() {
 		super();
@@ -14,7 +15,15 @@ public class User {
 		this.id = id;
 		this.name = name;
 	}
-
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
 	public Long getId() {
 		return id;
 	}

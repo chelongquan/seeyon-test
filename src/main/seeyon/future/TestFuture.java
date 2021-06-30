@@ -1,6 +1,9 @@
 package main.seeyon.future;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 public class TestFuture {
 //	public static void main(String[] args) {
@@ -58,7 +61,7 @@ public class TestFuture {
 ////				.map(shop -> String.format("%s price: %.2f", shop.getName(), shop.getPrice(shop.getName())))
 ////				.collect(Collectors.toList());
 //
-//		// CompletableFuture.supplyAsync
+		// CompletableFuture.supplyAsync
 //		List<CompletableFuture<String>> str2 = shops.stream()
 //				.map(shop -> CompletableFuture.supplyAsync(
 //						() -> String.format("%s price: %.2f", shop.getName(), shop.getPrice(shop.getName()))))
@@ -78,6 +81,7 @@ public class TestFuture {
 	 * @throws ExecutionException
 	 */
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		// 线程数
 		System.out.print(Runtime.getRuntime().availableProcessors());
 	}
 

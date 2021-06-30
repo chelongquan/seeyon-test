@@ -36,8 +36,8 @@ public class DownUtilTest {
 	public static void main(String[] args) {
 		try {
 			// "http://192.168.225.47:8080/server2/hotfix.do?method=downloadHotfix&versionParam=v8.0_2020-05-28"
-//			URL url = new URL("http://localhost:8090/server2/hotfix.do?method=downloadHotfix&versionParam=v8.0_2020-05-28");
-			URL url = new URL("http://192.168.225.47:8080/server2/hotfix.do?method=downloadHotfix&versionParam=v7.0_2019-01-01");
+			URL url = new URL("http://localhost:8090/server2/hotfix.do?method=downloadHotfix&versionParam=v8.0_2020-05-28");
+//			URL url = new URL("http://192.168.225.47:8080/server2/hotfix.do?method=downloadHotfix&versionParam=v7.0_2019-01-01");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setConnectTimeout(5 * 1000);
 			conn.setRequestMethod("POST");
